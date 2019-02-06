@@ -1,0 +1,29 @@
+{
+  "name": "hexo-oembed",
+  "version": "0.1.0",
+  "description": "embed oEmbed item on your Hexo article.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hinastory/hexo-oembd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hinastory/hexo-oembed/issues"
+  },
+  "keywords": [
+    "hexo",
+    "helper",
+    "plugin",
+    "tag",
+    "oembed"
+  ],
+  "author": "hinastory",
+  "license": "MIT",
+  "dependencies": {
+    "hexo-util": "^0.6.3",
+    "oembed": "^0.1.2"
+  }
+}
