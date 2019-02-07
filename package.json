@@ -1,6 +1,6 @@
 {
   "name": "hexo-oembed",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "embed oEmbed item on your Hexo article.",
   "main": "index.js",
   "scripts": {

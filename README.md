@@ -28,12 +28,15 @@ Features
 
 `{% oembed permlink [maxwidth] [maxheight] %}`
 
-## Options
+## Configuration
+
 ### className
-You can provide top-level base class name of this preview link HTML.
+
+You can provide a base CSS class name of this embeded HTML.
 (Default: `oembed`)
 
 ### endpoints
+
 You can provide endpoints of oEmbed provider.
 (Default: None)
 
@@ -65,7 +68,7 @@ oembed.EMBEDLY_KEY = "...";
 _config.yml:
 
 ```yaml
-linkPreview:
+oembed:
   className: oembed
   embedlyKey:
   endpoints:
@@ -81,4 +84,5 @@ linkPreview:
 ```
 
 ## License
+
 MIT
