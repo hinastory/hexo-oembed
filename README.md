@@ -56,12 +56,7 @@ Fallback Embed.ly if `embedlyKey` is provided.
 
 The Embed.ly service can deliver oEmbed information even for resources
 that don't provide oEmbed links. Go
-[sign up](https://app.embed.ly/pricing/free) with them and configure
-your API key like:
-
-```javascript
-oembed.EMBEDLY_KEY = "...";
-```
+[sign up](https://app.embed.ly/pricing/free) with them and configure your API key.
 
 ### Example
 
