@@ -14,8 +14,8 @@ Features
   - You can embed oEmbed Discovery compatible site
   - You can check a permalink with [oEmbed Tester](http://oembed.frdnspnzr.de/)
   - YouTube, Vimeo, Twitter, SlideShare, Speaker Deck, CodePen, TED, pixiv and more!
-- Supports oEmded endpoint user defenition
-  - You can embed oEmbed compatible site if you configure endpoint settings
+- Supports oEmded endpoint configuration
+  - You can embed oEmbed compatible site(not support oEmbed Discovery) if you configure endpoint settings
   - You can find oEmbed endpoint in  [oEmbed site](https://oembed.com/#section7)
   - Instagram, Gyazo, Flickr and more!
 - Automatic [Embed.ly](http://embed.ly/) fallback when an API key is provided
