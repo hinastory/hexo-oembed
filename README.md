@@ -1,18 +1,28 @@
 # hexo-oembed
 
+[![NPM](https://nodei.co/npm/hexo-oembed.png)](https://nodei.co/npm/hexo-oembed/)
+[![licence](https://img.shields.io/npm/l/hexo-oembed.svg?style=flat)](LICENSE)
+[![hexo](https://img.shields.io/badge/Hexo-%3E%3D3.0-blue.svg?style=flat-square)](https://hexo.io)
+[![codeclimate](https://img.shields.io/codeclimate/maintainability/hinastory/hexo-oembed.svg?style=flat)](https://codeclimate.com/github/hinastory/hexo-oembed)
+
 Embed [oEmbed](https://oembed.com/) item on your [Hexo](https://hexo.io/) article.
 
 Features
 --------
 
+- Supports oEmbed Discovery
+  - You can embed oEmbed Discovery compatible site
+  - You can check a permalink with [oEmbed Tester](http://oembed.frdnspnzr.de/)
+  - YouTube, Vimeo, Twitter, SlideShare, Speaker Deck, CodePen, TED, pixiv and more!
 - Supports oEmded endpoint user defenition
-- Automatic fallback oEmbed Discovery
+  - You can embed oEmbed compatible site if you configure endpoint settings
+  - You can find oEmbed endpoint in  [oEmbed site](https://oembed.com/#section7)
+  - Instagram, Gyazo, Flickr and more!
 - Automatic [Embed.ly](http://embed.ly/) fallback when an API key is provided
-
 
 ## Installation
 
-`npm install hexo-oembed`
+`npm install hexo-oembed --save`
 
 ## Usage
 
