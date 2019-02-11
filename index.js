@@ -18,8 +18,8 @@ hexo.extend.tag.register('oembed', function (args) {
 
 function getTag(url, maxwidth, maxheight) {
   let options = {};
-  if (hexo.config.oembed && hexo.config.embedlyKey) {
-    oembed.EMBEDLY_KEY = hexo.config.embedlyKey;
+  if (hexo.config.oembed && hexo.config.oembed.embedlyKey) {
+    oembed.EMBEDLY_KEY = hexo.config.oembed.embedlyKey;
   }
 
   if (maxwidth) options.maxwidth = maxwidth;
