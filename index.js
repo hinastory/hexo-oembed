@@ -30,8 +30,10 @@ function getTag(url, maxwidth, maxheight) {
     .catch(_ => fallbackOembed(url, options));
 }
 
-function errorOembedTag(url) {
-  return util.htmlTag('div', {style: "color: red;"}, `failed getting oembed item.(url=${url})`);
+function errorTag(msg, url) {
+  const mainClassName = (hexo.config.oembed && hexo.config.oembed.className) ? hexo.config.oembed.className : "oembed";
+  const errMsg = util.htmlTag('span', {}, `${msg}(url=${url})`);
+  return util.htmlTag('div', {class: `${mainClassName}-error`, style: 'color: red;'}, errMsg);
 }
 
 function fallbackOembed(url, options) {
@@ -39,7 +41,7 @@ function fallbackOembed(url, options) {
     oembed.fetch(url, options, (error, result) => {
       if (error) {
         console.log(url, error);
-        resolve(errorOembedTag(url));
+        resolve(errorTag('failed getting oembed item.',url));
       } else {
         resolve(makeEmbedTag(url, result));
       }
@@ -91,6 +93,8 @@ function makeEmbedTag(url, result) {
       const inner = util.htmlTag('div', { class: `${mainClassName}-inner` }, result.html);
       return util.htmlTag('div', { class: `${mainClassName}-outer ${mainClassName}-${subClassName}` }, inner);
     default:
-      return "unsupported oembed type";
+      const errMsg = 'unsupported oembed type.';
+      console.log(url, errMsg);
+      return errorTag(errMsg, url);
   }
 }
