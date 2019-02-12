@@ -28,6 +28,10 @@ Features
 
 `{% oembed permlink [maxwidth] [maxheight] %}`
 
+## Demo
+
+See [Demo page](https://hinastory.github.io/cats-cats-cats/hexo-oembed-demo/).
+
 ## Configuration
 
 ### className
@@ -77,6 +81,16 @@ oembed:
       match: flickr
       url: http://www.flickr.com/services/oembed/
 ```
+
+## Thanks
+
+This plugin refers to the following three OSS resources:
+
+- https://github.com/astro/node-oembed
+- https://github.com/monsier-oui/hexo-tag-oembed
+- https://github.com/minamo173/hexo-tag-link-preview
+
+Thanks to them.
 
 ## License
 

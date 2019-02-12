@@ -11,6 +11,7 @@
 const util = require('hexo-util');
 const oembed = require('oembed');
 const querystring = require('querystring');
+const mainClassName = (hexo.config.oembed && hexo.config.oembed.className) ? hexo.config.oembed.className : "oembed";
 
 hexo.extend.tag.register('oembed', function (args) {
   return getTag(args[0], args[1], args[2]);
@@ -22,7 +23,7 @@ function getTag(url, maxwidth, maxheight) {
     oembed.EMBEDLY_KEY = hexo.config.oembed.embedlyKey;
   }
 
-  if (maxwidth) options.maxwidth = maxwidth;
+  if (maxwidth && maxwidth !== '-') options.maxwidth = maxwidth;
   if (maxheight) options.maxheight = maxheight;
 
   return fetchOembed(url, options)
@@ -31,7 +32,7 @@ function getTag(url, maxwidth, maxheight) {
 }
 
 function errorTag(msg, url) {
-  const mainClassName = (hexo.config.oembed && hexo.config.oembed.className) ? hexo.config.oembed.className : "oembed";
+
   const errMsg = util.htmlTag('span', {}, `${msg}(url=${url})`);
   return util.htmlTag('div', {class: `${mainClassName}-error`, style: 'color: red;'}, errMsg);
 }
@@ -79,7 +80,6 @@ function fetchOembed(url, options) {
 }
 
 function makeEmbedTag(url, result) {
-  const mainClassName = (hexo.config.oembed && hexo.config.oembed.className) ? hexo.config.oembed.className : "oembed";
   const subClassName = result.provider_name ? result.provider_name.toLowerCase().replace(/[ .]/g, '-') : "default"
 
   switch (result.type) {
