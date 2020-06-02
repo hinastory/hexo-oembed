@@ -82,7 +82,7 @@ oembed:
       url: http://www.flickr.com/services/oembed/
     twitter:
       match: twitter
-      url: https://publish.twitter.com/oembed      
+      url: https://publish.twitter.com/oembed
 ```
 
 ## Thanks
