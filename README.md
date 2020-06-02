@@ -13,11 +13,11 @@ Features
 - Supports oEmbed Discovery
   - You can embed an oEmbed Discovery compatible site
   - You can check a permalink with [oEmbed Tester](http://oembed.frdnspnzr.de/)
-  - YouTube, Vimeo, Twitter, SlideShare, Speaker Deck, CodePen, TED, pixiv and more!
+  - YouTube, Vimeo, SlideShare, Speaker Deck, CodePen, TED, pixiv and more!
 - Supports oEmded endpoint configuration
   - You can embed an oEmbed compatible site(not support oEmbed Discovery) if you configure endpoint settings
   - You can find an oEmbed endpoint at [oEmbed site](https://oembed.com/#section7)
-  - Instagram, Gyazo, Flickr and more!
+  - Twitter, Instagram, Gyazo, Flickr and more!
 - Automatic [Embed.ly](http://embed.ly/) fallback when an API key is provided
 
 ## Installation
@@ -80,6 +80,9 @@ oembed:
     flickr:
       match: flickr
       url: http://www.flickr.com/services/oembed/
+    twitter:
+      match: twitter
+      url: https://publish.twitter.com/oembed      
 ```
 
 ## Thanks
