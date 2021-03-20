@@ -13,7 +13,7 @@ Features
 - Supports oEmbed Discovery
   - You can embed an oEmbed Discovery compatible site
   - You can check a permalink with [oEmbed Tester](http://oembed.frdnspnzr.de/)
-  - YouTube, Vimeo, SlideShare, Speaker Deck, CodePen, TED, pixiv and more!
+  - Vimeo, SlideShare, Speaker Deck, CodePen, TED, pixiv and more!
 - Supports oEmded endpoint configuration
   - You can embed an oEmbed compatible site(not support oEmbed Discovery) if you configure endpoint settings
   - You can find an oEmbed endpoint at [oEmbed site](https://oembed.com/#section7)
@@ -71,9 +71,9 @@ oembed:
   className: oembed
   embedlyKey:
   endpoints:
-    instagram:
-      match: instagram
-      url: http://api.instagram.com/oembed/
+    youtube:
+      match: youtube
+      url: https://www.youtube.com/oembed
     gyazo:
       match: gyazo
       url: https://api.gyazo.com/api/oembed/
